@@ -56,7 +56,7 @@
 <body class="bg-[#f5f5f5]">
 
   <!-- Navbar - Fixed for mobile -->
-  <nav class="flex justify-between items-center px-3 sm:px-8 py-2 bg-white shadow-md sticky top-0 z-50 mobile-optimized-nav">
+  <nav class="flex justify-between items-center px-3 sm:px-8 py-2 bg-white shadow-md z-50 mobile-optimized-nav">
     <div class="flex items-center space-x-2">
       <img src="./assets/logo.png" alt="Logo" class="w-8 h-8 sm:w-14 sm:h-14">
       <h1 class="text-sm font-bold text-[#006747] leading-tight sm:text-xl">Emergency<br>Hotlines</h1>
@@ -103,7 +103,7 @@
         <div class="flex gap-1 mt-auto">
           <button id="copy-1"
             class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
-            data-number="999" data-name="Police">
+            data-number="999" data-name="National Emergency">
             <i class="fas fa-copy text-xs"></i> Copy
           </button>
           <button id="call-1"
@@ -127,12 +127,12 @@
         <div class="flex gap-1 mt-auto">
           <button id="copy-2"
             class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
-            data-number="1994-999999" data-name="Ambulance">
+            data-number="9999" data-name="Police">
             <i class="fas fa-copy text-xs"></i> Copy
           </button>
           <button id="call-2"
             class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
-            data-number="1994-999999" data-name="Ambulance">
+            data-number="999" data-name="Police">
             <i class="fas fa-phone text-xs"></i> Call
           </button>
         </div>
@@ -318,12 +318,15 @@
         <button id="clearHistoryBtn"
           class="px-3 py-1 rounded-full bg-[#00A63E] text-white hover:bg-[#36f47f] text-xs sm:text-sm font-bold">Clear</button>
       </div>
-      <div id="historyContent" class="min-h-[120px] max-h-[250px] overflow-y-auto">
+      <div id="historyContent" class="min-h-[120px] max-h-[250px]">
         <p id="noHistoryMessage" class="text-gray-500 text-center py-4 text-xs sm:text-sm">No call history yet</p>
       </div>
     </div>
     
   </section>
+
+  <script src="./scrept.js"></script>
+
 </body>
 
 </html>
