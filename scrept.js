@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     callHistory.forEach(item => {
       const wrap = document.createElement('div');
-      wrap.className = 'flex justify-between items-center bg-gray-100 rounded-md shadow-sm p-4 mb-3';
+      wrap.className = 'flex justify-between items-center bg-gray-100 rounded-md shadow-sm p-4 mb-4';
 
       wrap.innerHTML = `
       <div class="flex flex-col">
