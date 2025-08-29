@@ -8,11 +8,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
+    * {
       font-family: system-ui, -apple-system, sans-serif;
     }
 
-    @media (max-width: 768px) {
+    /* Custom breakpoint for 425px - 570px */
+    @media (max-width: 570px) and (min-width: 425px) {
       .card-section {
         grid-template-columns: 1fr !important;
       }
@@ -23,12 +24,30 @@
 
       .history-section {
         margin-top: 1rem;
+        max-height: 250px;
       }
-    }
 
-    .history-item {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+      .hero-text {
+        font-size: 1.1rem;
+      }
+
+      .hero-title {
+        font-size: 1.5rem;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+      }
+
+      .card p {
+        font-size: 0.85rem;
+      }
+
+      .card button {
+        font-size: 0.75rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+      }
     }
   </style>
 </head>
