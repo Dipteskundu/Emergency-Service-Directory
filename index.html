@@ -48,7 +48,6 @@
       .mobile-optimized-button {
         padding: 0.5rem;
         font-size: 0.75rem;
-        
       }
     }
   </style>
@@ -60,19 +59,19 @@
   <nav class="flex justify-between items-center px-3 sm:px-8 py-2 bg-white shadow-md sticky top-0 z-50 mobile-optimized-nav">
     <div class="flex items-center space-x-2">
       <img src="./assets/logo.png" alt="Logo" class="w-8 h-8 sm:w-14 sm:h-14">
-      <h1 class="text-sm font-bold text-[#006747] leading-tight">Emergency<br>Hotlines</h1>
+      <h1 class="text-sm font-bold text-[#006747] leading-tight sm:text-xl">Emergency<br>Hotlines</h1>
     </div>
     <div class="flex items-center space-x-1">
-      <div class="flex items-center justify-center space-x-1 bg-[#e6ffe6] px-2 py-1 rounded-full">
-        <span id="heartCount" class="font-bold text-black text-xs">0</span>
+      <div class="flex items-center justify-center space-x-1 bg-[#e6ffe6] px-5 py-1 rounded-full">
+        <span id="heartCount" class="font-bold text-black text-xs sm:text-lg">0</span>
         <img src="assets/heart.png" alt="Heart" class="w-4 h-4 sm:w-6 sm:h-6">
       </div>
-      <div class="flex items-center justify-center space-x-1 bg-[#e6ffe6] px-2 py-1 rounded-full ml-1">
-        <span id="coinCount" class="font-bold text-black text-xs">100</span>
+      <div class="flex items-center justify-center space-x-1 bg-[#e6ffe6] px-4 py-1 rounded-full ml-1">
+        <span id="coinCount" class="font-bold text-black text-xs sm:text-lg">100</span>
         <img src="assets/coin.png" alt="Coin" class="w-4 h-4 sm:w-6 sm:h-6">
       </div>
       <button id="copyCounterBtn"
-        class="font-bold px-2 py-1 rounded-full bg-[#00A63E] text-white hover:bg-[#36f47f] text-xs ml-1">
+        class="font-bold px-5 py-1 rounded-full bg-[#00A63E] text-white hover:bg-[#36f47f] text-xs sm:text-lg ml-1">
         <span id="copyCount" class="font-bold text-white">0</span> Copy
       </button>
     </div>
@@ -91,97 +90,239 @@
     <!-- Card Section -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 flex-[3] card-section">
 
-      <!-- 1) National Emergency -->
-      <div class="bg-white rounded-xl shadow-lg p-3 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
-        <i id="heart-1" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5"></i>
-        <div class="w-12 h-12 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+      <!-- National Emergency -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-1" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
           <img src="./assets/emergency.png" alt="Police" class="w-[50%] h-[50%]">
         </div>
-        <h3 class="text-base font-bold text-gray-800 mb-1">জাতীয় জরুরি সেবা</h3>
-        <p class="text-gray-600 text-xs mb-1">National Emergency</p>
-        <p class="text-xl font-bold text-gray-800 mb-1">999</p>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">জাতীয় জরুরি সেবা</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">National Emergency</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">999</p>
         <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">All</span>
         <div class="flex gap-1 mt-auto">
           <button id="copy-1"
-            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs mobile-optimized-button"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
             data-number="999" data-name="Police">
             <i class="fas fa-copy text-xs"></i> Copy
           </button>
           <button id="call-1"
-            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs mobile-optimized-button"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
             data-number="999" data-name="National Emergency">
             <i class="fas fa-phone text-xs"></i> Call
           </button>
         </div>
       </div>
 
-      <!-- 2) Police -->
-      <div class="bg-white rounded-xl shadow-lg p-3 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
-        <i id="heart-2" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5"></i>
-        <div class="w-12 h-12 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+      <!-- Police -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-2" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
           <img src="./assets/police.png" alt="Ambulance" class="w-[80%] h-[80%]">
         </div>
-        <h3 class="text-base font-bold text-gray-800 mb-1">পুলিশ</h3>
-        <p class="text-gray-600 text-xs mb-1">Police</p>
-        <p class="text-xl font-bold text-gray-800 mb-1">999</p>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">পুলিশ</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Police</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">999</p>
         <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">Police</span>
         <div class="flex gap-1 mt-auto">
           <button id="copy-2"
-            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs mobile-optimized-button"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
             data-number="1994-999999" data-name="Ambulance">
             <i class="fas fa-copy text-xs"></i> Copy
           </button>
           <button id="call-2"
-            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs mobile-optimized-button"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
             data-number="1994-999999" data-name="Ambulance">
             <i class="fas fa-phone text-xs"></i> Call
           </button>
         </div>
       </div>
 
-      <!-- 3) Fire Service -->
-      <div class="bg-white rounded-xl shadow-lg p-3 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
-        <i id="heart-3" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5"></i>
-        <div class="w-12 h-12 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+      <!-- Fire Service -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-3" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
           <img src="./assets/fire-service.png" alt="Fire Service" class="w-[65%] h-[65%]">
         </div>
-        <h3 class="text-base font-bold text-gray-800 mb-1">ফায়ার সার্ভিস</h3>
-        <p class="text-gray-600 text-xs mb-1">Fire</p>
-        <p class="text-xl font-bold text-gray-800 mb-1">999</p>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">ফায়ার সার্ভিস</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Fire</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">999</p>
         <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">Fire</span>
         <div class="flex gap-1 mt-auto">
           <button id="copy-3"
-            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs mobile-optimized-button"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
             data-number="999" data-name="Fire Service">
             <i class="fas fa-copy text-xs"></i> Copy
           </button>
           <button id="call-3"
-            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs mobile-optimized-button"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
             data-number="999" data-name="Fire Service">
             <i class="fas fa-phone text-xs"></i> Call
           </button>
         </div>
       </div>
 
-      <!-- Additional cards would follow the same pattern with mobile-optimized-card class -->
+      <!-- Ambulance -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-4" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+          <img src="./assets/ambulance.png" alt="Ambulance" class="w-[65%] h-[65%]">
+        </div>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">অ্যাম্বুলেন্স</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Ambulance</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">1994-999999</p>
+        <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">Health</span>
+        <div class="flex gap-1 mt-auto">
+          <button id="copy-4"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="1994-999999" data-name="Ambulance">
+            <i class="fas fa-copy text-xs"></i> Copy
+          </button>
+          <button id="call-4"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="1994-999999" data-name="Ambulance">
+            <i class="fas fa-phone text-xs"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- Women & Child Helpline -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-5" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+          <img src="./assets/emergency.png" alt="Women & Child Helpline" class="w-[50%] h-[50%]">
+        </div>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">নারী ও শিশু সহায়তা</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Women & Child Helpline</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">109</p>
+        <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">Help</span>
+        <div class="flex gap-1 mt-auto">
+          <button id="copy-5"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="109" data-name="Women & Child Helpline">
+            <i class="fas fa-copy text-xs"></i> Copy
+          </button>
+          <button id="call-5"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="109" data-name="Women & Child Helpline">
+            <i class="fas fa-phone text-xs"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- Anti-Corruption -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-6" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+          <img src="./assets/emergency.png" alt="Anti-Corruption" class="w-[50%] h-[50%]">
+        </div>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">দুদক</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Anti-Corruption</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">106</p>
+        <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">Govt</span>
+        <div class="flex gap-1 mt-auto">
+          <button id="copy-6"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="106" data-name="Anti-Corruption">
+            <i class="fas fa-copy text-xs"></i> Copy
+          </button>
+          <button id="call-6"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="106" data-name="Anti-Corruption">
+            <i class="fas fa-phone text-xs"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- Electricity -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-7" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+          <img src="./assets/emergency.png" alt="Electricity" class="w-[50%] h-[50%]">
+        </div>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">বিদ্যুৎ বিভ্রাট</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Electricity Outage</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">16216</p>
+        <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">Electricity</span>
+        <div class="flex gap-1 mt-auto">
+          <button id="copy-7"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="16216" data-name="Electricity Helpline">
+            <i class="fas fa-copy text-xs"></i> Copy
+          </button>
+          <button id="call-7"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="16216" data-name="Electricity Helpline">
+            <i class="fas fa-phone text-xs"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!--  BRAC -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-8" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+          <img src="./assets/brac.png" alt="BRAC" class="w-[65%] h-[65%]">
+        </div>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">ব্র্যাক</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Brac</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">16445</p>
+        <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">NGO</span>
+        <div class="flex gap-1 mt-auto">
+          <button id="copy-8"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="16445" data-name="BRAC">
+            <i class="fas fa-copy text-xs"></i> Copy
+          </button>
+          <button id="call-8"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="16445" data-name="BRAC">
+            <i class="fas fa-phone text-xs"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- Bangladesh Railway -->
+      <div class="bg-white rounded-xl shadow-lg p-3 sm:p-4 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300 mobile-optimized-card">
+        <i id="heart-9" class="far fa-heart absolute top-3 right-3 text-gray-400 cursor-pointer w-5 h-5 sm:w-6 sm:h-6"></i>
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffebee] rounded-xl flex items-center justify-center mb-3">
+          <img src="./assets/Bangladesh-Railway.png" alt="Bangladesh Railway" class="w-[75%] h-[75%]">
+        </div>
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1">বাংলাদেশ রেলওয়ে</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-1">Bangladesh Railway</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">163</p>
+        <span class="w-fit bg-[#f5f5f5] px-2 py-1 rounded-full text-xs font-medium text-gray-600 mb-3">Travel</span>
+        <div class="flex gap-1 mt-auto">
+          <button id="copy-9"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="163" data-name="Bangladesh Railway">
+            <i class="fas fa-copy text-xs"></i> Copy
+          </button>
+          <button id="call-9"
+            class="flex-1 bg-[#00c853] text-white py-2 rounded-lg flex items-center justify-center gap-1 font-bold text-xs sm:text-sm mobile-optimized-button"
+            data-number="163" data-name="Bangladesh Railway">
+            <i class="fas fa-phone text-xs"></i> Call
+          </button>
+        </div>
+      </div>
 
     </div>
 
     <!-- History Section -->
-    <div class="flex-1 bg-white rounded-lg shadow-md p-3 history-section">
+    <div class="flex-1 bg-white rounded-lg shadow-md p-3 sm:p-4 history-section">
       <div class="flex justify-between items-center mb-3 history-header">
         <div class="flex items-center space-x-2 history-title">
-          <i class="fas fa-history text-gray-700 text-sm"></i>
-          <h3 class="text-base font-bold text-gray-800">Call History</h3>
+          <i class="fas fa-history text-gray-700 text-sm sm:text-base"></i>
+          <h3 class="text-base sm:text-lg font-bold text-gray-800">Call History</h3>
         </div>
         <button id="clearHistoryBtn"
-          class="px-3 py-1 rounded-full bg-[#00A63E] text-white hover:bg-[#36f47f] text-xs font-bold">Clear</button>
+          class="px-3 py-1 rounded-full bg-[#00A63E] text-white hover:bg-[#36f47f] text-xs sm:text-sm font-bold">Clear</button>
       </div>
       <div id="historyContent" class="min-h-[120px] max-h-[250px] overflow-y-auto">
-        <p id="noHistoryMessage" class="text-gray-500 text-center py-4 text-xs">No call history yet</p>
+        <p id="noHistoryMessage" class="text-gray-500 text-center py-4 text-xs sm:text-sm">No call history yet</p>
       </div>
     </div>
-
+    
   </section>
 </body>
 
