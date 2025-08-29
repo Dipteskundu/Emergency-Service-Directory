@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Service Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .card-section {
+        grid-template-columns: 1fr !important;
+      }
+
+      .main-section {
+        flex-direction: column;
+      }
+
+      .history-section {
+        margin-top: 1rem;
+      }
+    }
+
+    .history-item {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f5f5f5]">
+
+  <!-- Navbar -->
+  <nav
+    class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-md sticky top-0 z-50 transition-transform duration-300"
+    id="navbar">
+    <div class="flex items-center space-x-3">
+      <img src="./assets/logo.png" alt="Logo" class="w-10 h-10 sm:w-14 sm:h-14">
+      <h1 class="text-base sm:text-xl font-bold text-[#006747]">Emergency <br> Hotlines</h1>
+    </div>
+    <div class="flex items-center space-x-1 sm:space-x-1">
+      <div class="flex items-center justify-center space-x-2 bg-[#e6ffe6] px-4 py-2 rounded-full">
+        <span id="heartCount" class="font-bold text-black">0</span>
+        <img src="assets/heart.png" alt="Heart" class="w-5 h-5 sm:w-6 sm:h-6">
+      </div>
+      <div class="flex items-center justify-center space-x-2 bg-[#e6ffe6] px-4 py-2 rounded-full">
+        <span id="coinCount" class="font-bold text-black">100</span>
+        <img src="assets/coin.png" alt="Coin" class="w-5 h-5 sm:w-6 sm:h-6">
+      </div>
+      <div class="flex items-center space-x-1">
+        <button id="copyCounterBtn"
+          class="font-bold px-2 py-1 sm:px-4 sm:py-2 rounded-full bg-[#00A63E] text-white hover:bg-[#36f47f] text-sm sm:text-base">
+          <span id="copyCount" class="font-bold text-white">0</span> Copy
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="flex flex-col items-center justify-center text-center py-8 sm:py-12 bg-gradient-to-r from-[rgba(1,50,35,1)] via-[#006747] to-[rgba(1,50,35,1)]">
+    <img src="./assets/logo-dark.png" alt="Emergency Logo" class="w-16 h-16 sm:w-20 sm:h-20 mb-4 sm:mb-5">
+    <h2 class="text-2xl text-white sm:text-4xl font-bold mb-2 sm:mb-3">জরুরি সেবা ডিরেক্টরি</h2>
+    <p class=" text-base text-white sm:text-lg">Government Emergency Services at Your Fingertip – A Project by
+      Government of the People’s Republic of Bangladesh</p>
+  </section>
+
+  <!-- Main Section -->
+  <section class="flex flex-col lg:flex-row gap-3 sm:gap-4 p-4 sm:p-6 main-section">
+
+    <!-- Card Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-3 flex-[3] card-section">
+
+      <!-- 1) National Emergency -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-1" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/emergency.png" alt="Police" class="w-[50%] h-[50%] sm:w-8 sm:h-8">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">জাতীয় জরুরি সেবা</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">National Emergency</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">999</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">All</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-1"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="999" data-name="Police">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-1"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="999" data-name="National Emergency">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 2) Police -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-2" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/police.png" alt="Ambulance" class="w-[80%] h-[80%] sm:w-[80%] sm:h-[[80%]]">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">পুলিশ</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Police</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">999</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">Police</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-2"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="1994-999999" data-name="Ambulance">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-2"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="1994-999999" data-name="Ambulance">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 3) Fire Service -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-3" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/fire-service.png" alt="Fire Service" class="w-[65%] h-[65%] sm:w-10 sm:h-10">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">ফায়ার সার্ভিস</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Fire</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">999</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">Fire</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-3"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="999" data-name="Fire Service">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-3"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="999" data-name="Fire Service">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 4) Ambulance (card title shows Ambulance) -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-4" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/ambulance.png" alt="Bangladesh Railway" class="w-[65%] h-[65%] sm:w-10 sm:h-10">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">অ্যাম্বুলেন্স</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Ambulance</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">1994-999999</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">Health</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-4"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="163" data-name="Bangladesh Railway">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-4"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="163" data-name="Bangladesh Railway">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 5) BRAC -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-5" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/emergency.png" alt="Police" class="w-[50%] h-[50%] sm:w-8 sm:h-8">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">নারী ও শিশু সহায়তা</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Women & Child Helpline</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">109</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">Help</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-5"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="16445" data-name="BRAC">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-5"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="16445" data-name="BRAC">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 6) Anti-Corruption -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-6" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/emergency.png" alt="Police" class="w-[50%] h-[50%] sm:w-8 sm:h-8">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">দুদক</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Anti-Corruption</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">106</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">Govt</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-6"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="109" data-name="Women & Child Helpline">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-6"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="109" data-name="Women & Child Helpline">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 7) Electricity -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-7" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/emergency.png" alt="Police" class="w-[50%] h-[50%] sm:w-8 sm:h-8">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">বিদ্যুৎ বিভ্রাট</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Electricity Outage</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">16216</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">Electricity</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-7"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="16216" data-name="Electricity Helpline">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-7"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="16216" data-name="Electricity Helpline">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 8) BRAC (icon brac.png) -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-8" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/brac.png" alt="Anti-Corruption Helpline" class="w-[65%] h-[65%] sm:w-10 sm:h-10">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">ব্র্যাক</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Brac</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">16445</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">NGO</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-8"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="106" data-name="Anti-Corruption Helpline">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-8"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="106" data-name="Anti-Corruption Helpline">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+      <!-- 9) Bangladesh Railway -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-4 sm:p-6 relative flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+        <i id="heart-9" class="far fa-heart absolute top-4 right-4 text-gray-400 cursor-pointer w-6 h-6"></i>
+        <div class="w-16 h-16 sm:w-16 sm:h-13 bg-[#ffebee] rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+          <img src="./assets/Bangladesh-Railway.png" alt="Social Service" class="w-[75%] h-[75%] sm:w-10 sm:h-10">
+        </div>
+        <h3 class=" text-lg sm:text-xl font-bold text-gray-800 mb-1">বাংলাদেশ রেলওয়ে</h3>
+        <p class="text-gray-600 text-sm sm:text-base mb-2 sm:mb-3">Bangladesh Railway</p>
+        <p class="text-2xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">163</p>
+        <span
+          class="w-fit bg-[#f5f5f5] px-3 sm:px-5 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-5">Travel</span>
+        <div class="flex gap-2 mt-auto">
+          <button id="copy-9"
+            class="flex-1 bg-[#f5f5f5] border border-gray-300 text-gray-800 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="16457" data-name="Social Service">
+            <i class="fas fa-copy text-xs sm:text-sm"></i> Copy
+          </button>
+          <button id="call-9"
+            class="flex-1 bg-[#00c853] text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-1 sm:gap-2 font-bold text-sm sm:text-base"
+            data-number="16457" data-name="Social Service">
+            <i class="fas fa-phone text-xs sm:text-sm"></i> Call
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- History Section -->
+    <div class="flex-1 bg-white rounded-lg shadow-md p-4 sm:p-5 history-section">
+      <div class="flex justify-between space-x-7 mb-3 history-header">
+        <div class="flex items-center space-x-2 history-title">
+          <i class="fas fa-history text-gray-700 text-sm"></i>
+          <h3 class="text-lg font-bold text-gray-800">Call History</h3>
+        </div>
+        <button id="clearHistoryBtn"
+          class="px-4 py-1 rounded-full bg-[#00A63E] text-white hover:bg-[#36f47f] text-base font-bold">Clear</button>
+      </div>
+      <div id="historyContent" class="min-h-[150px] max-h-[300px] overflow-y-auto">
+        <p id="noHistoryMessage" class="text-gray-500 text-center py-6 text-sm">No call history yet</p>
+      </div>
+    </div>
+
+  </section>
+</body>
+
+</html>
